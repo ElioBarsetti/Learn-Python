@@ -57,12 +57,26 @@ print(10 % 3)      # Mod (modulo) donne le reste de 10 divisé par 3  (11 % 3 = 
 
 my_num = 5
 print(my_num)
-print(str(my_num)) # Conversion en string
-print(str(my_num) + " mon numéro préféré")
+print(str(my_num))                          # Conversion en string
+print(str(my_num) + " mon numéro préféré")  # Conversion en string plus ajout de string
+print(abs(-5))                              # Donne la valeur absolue du nombre
+print(pow(4, 6))                            # 4 exposant 6
+print(max(4, 6))                            # Retourne le plus gros chiffre
+print(min(4, 6))                            # Retourne le plus petit chiffre
+print(round(3.499))                         # Approxime le nombre
+print(round(3.500))                         # Approxime le nombre
+print("\n")
 
+from math import*     # Importe plusieurs fonction pour des mathémagiques, c'est un module de mathématique
+print(floor(3.7))     # Approxime vers le bas
+print(ceil(3.2))      # Approxime vers le haut
+print(sqrt(36))       # Fait la racine carrée
+print("\n")
 
-
-
+#----- Get inputs from users -----
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+print("Hello " + name + "! You are " + age )
 
 
 
