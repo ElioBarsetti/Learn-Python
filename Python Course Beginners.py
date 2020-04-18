@@ -252,10 +252,161 @@ print("\n")
 
 
 #----- Dictionaries (2h 07min 17sec)  -----
+monthConvertions = {
+    "Jan": "January",        # Jan, Feb, Mar = keys.... January, February, MArch = values
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sept": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December",
+}
+
+print(monthConvertions["Nov"])
+print(monthConvertions.get("Dec"))
+print(monthConvertions.get("Luv"))                     # = None, car Luv n'existe pas
+print(monthConvertions.get("Luv", "Not a valid key"))  # Envoie un output lorsque ca retourne "None"
+print("\n")
 
 
+#----- Whiles Loops (2h 14min 13sec)  -----
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+print("Done with loop")
+print("\n")
 
 
+#----- Building a guessing game (2h 20min 02sec)  -----
+# secret_word = "giraffe"
+# guess = ""
+# guess_count = 0
+# guess_limit = 3
+# out_of_guesses = False
+#
+# while guess != secret_word and not(out_of_guesses):
+#     if guess_count < guess_limit:
+#         guess = input("You have 3 tries, enter guess: ")
+#         guess_count += 1
+#     else:
+#         out_of_guesses = True
+#
+# if out_of_guesses == True:
+#     print("Out of guesses, you lose!")
+# else:
+#     print("You win!")
 
 
+#----- For loops (2h 32min 45sec)  -----
+friends = ["Jim", "Karen", "Kevin"]
+for name in friends:
+    print(name)
 
+for index in range(3, 10):
+    print(index)
+
+for index in range(len(friends)):
+    print(friends[index])
+
+for index in range(5):
+    if index == 0 or index == 3:
+        print("First Iteraction or Fourth Iteration")
+    else:
+        print("Not First")
+print("\n")
+
+
+#----- Exponent Function (2h 41min 21sec)  -----
+def raise_to_power(base_number, power_number):
+    result = 1
+    for index in range(power_number):
+        result = result * base_number
+    return result
+print(raise_to_power(3, 4))
+print("\n")
+
+
+#----- 2D Lists & Nested Loops (2h 47min 14sec)  -----
+number_grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0]
+]
+
+print(number_grid[0] [0])
+print(number_grid[2] [1])
+print(number_grid[3] [0])
+print("\n")
+
+for row in number_grid:
+    for col in row:
+        print(col)
+print("\n")
+
+#----- Build a Translator (2h 52min 41sec)  -----
+# # Giraffe language
+# # vowels --> g
+# # ex: dog --> dgg    cat --> cgt
+# def translate(phrase):
+#     translation = ""
+#     for letter in phrase:
+#         if letter in "AEIOUYaeiouy":         # On aurait pu aussi faire  "if letter.lower() in "aeiouy": "
+#             translation = translation + "g"
+#         else:
+#             translation = translation + letter
+#     return translation
+# print(translate(input("Enter a phrase: ")))
+# print("\n")
+
+
+#----- Comments (3h 00min 19sec)  -----
+# This print out a string
+print("Comments are fun")
+''' This is a comment too '''
+print("\n")
+
+
+#----- Try Except (3h 04min 19sec)  -----
+# This is for catching errors
+try:
+    value = 10 / 0                            # infaisable donc il va sortir directement dans l'except. Impossible de diviser par 0
+    number = int(input("Enter a number: "))
+    print(number)
+except:
+    print("Invalid Input")
+
+try:
+    value = 10 / 0
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError as err:               # Retourne l'erreur specifique
+    print(err)
+except ValueError:
+    print("Invalid Input")
+print("\n")
+
+
+#----- Reading files (3h 12min 41sec)  -----
+employee_file = open("employees.txt", "r")           # w = write, r = read, a = append, r+ = read and write
+print(employee_file.read())                      # readable() --> True = On est capable de lire le fichier car il a /t/ ouvert en "r
+print("\n")
+#print(employee_file.readline())                 # Lit la 1ere ligne seulement
+#print(employee_file.readlines()[1])              # Capable d<aller chercher la ligne a un index precit
+employee_file.close()
+print("\n")
+
+employee_file = open("employees.txt", "r")
+for employee in employee_file.readlines():
+    print(employee)
+employee_file.close()
+print("\n")
+
+
+#----- Writing to files (3h 21min 27sec)  -----
