@@ -422,3 +422,28 @@ print("\n")
 
 
 #----- Modules and Pip (3h 28min 15sec)  -----
+import tools_example
+print(tools_example.roll_dice(10))
+# https://docs.python.org/3/py-modindex.html    Information sur les modules de Python
+# python-docx pour aller chercher d'autres modules a installe
+# "pip" est bon pour downloader des modules avec python-docx
+print("\n")
+
+
+#----- Classes & Objects (3h 43min 56sec)  -----
+from Student import Student    # From the Student file import Student class
+student1 = Student("Jim", "Business", 3.1, False)
+student2 = Student("Pam", "Art", 2.5, True)
+print(student1.name)
+print(student1.major)
+print(student1.gpa)
+print(student1.is_on_probation)
+print("\n")
+print(student2.name)
+print(student2.major)
+print(student2.gpa)
+print(student2.is_on_probation)
+print("\n")
+
+
+#----- Building a Multiple Choice Quiz (3h 57min 39sec)  -----
