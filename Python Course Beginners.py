@@ -398,7 +398,7 @@ employee_file = open("employees.txt", "r")           # w = write, r = read, a = 
 print(employee_file.read())                      # readable() --> True = On est capable de lire le fichier car il a /t/ ouvert en "r
 print("\n")
 #print(employee_file.readline())                 # Lit la 1ere ligne seulement
-#print(employee_file.readlines()[1])              # Capable d<aller chercher la ligne a un index precit
+#print(employee_file.readlines()[1])              # Capable d'aller chercher la ligne a un index precit
 employee_file.close()
 print("\n")
 
@@ -410,3 +410,15 @@ print("\n")
 
 
 #----- Writing to files (3h 21min 27sec)  -----
+employee_file = open("employees.txt", "a")        # a = append, ajout d<une liste au fichier
+employee_file.write("\nToby - Human Ressource")
+employee_file.close()
+print("\n")
+
+employee_file = open("employees1.txt", "w")        # w = w, cree un nouveau fichier et overwrite tout
+employee_file.write("\nKelly - Customer Service")
+employee_file.close()
+print("\n")
+
+
+#----- Modules and Pip (3h 28min 15sec)  -----

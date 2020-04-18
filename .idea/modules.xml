@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Daily-Coding-Problems.iml" filepath="$PROJECT_DIR$/.idea/Daily-Coding-Problems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Daily-Coding-Problems/.idea/Daily-Coding-Problems.iml" filepath="$PROJECT_DIR$/../Daily-Coding-Problems/.idea/Daily-Coding-Problems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Learn-Python.iml" filepath="$PROJECT_DIR$/.idea/Learn-Python.iml" />
     </modules>
   </component>
 </project>
