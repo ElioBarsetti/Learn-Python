@@ -394,7 +394,7 @@ print("\n")
 
 
 #----- Reading files (3h 12min 41sec)  -----
-employee_file = open("employees.txt", "r")           # w = write, r = read, a = append, r+ = read and write
+employee_file = open("Python Course Beginner Package Files/employees.txt", "r")           # w = write, r = read, a = append, r+ = read and write
 print(employee_file.read())                      # readable() --> True = On est capable de lire le fichier car il a /t/ ouvert en "r
 print("\n")
 #print(employee_file.readline())                 # Lit la 1ere ligne seulement
@@ -402,7 +402,7 @@ print("\n")
 employee_file.close()
 print("\n")
 
-employee_file = open("employees.txt", "r")
+employee_file = open("Python Course Beginner Package Files/employees.txt", "r")
 for employee in employee_file.readlines():
     print(employee)
 employee_file.close()
@@ -410,12 +410,12 @@ print("\n")
 
 
 #----- Writing to files (3h 21min 27sec)  -----
-employee_file = open("employees.txt", "a")        # a = append, ajout d<une liste au fichier
+employee_file = open("Python Course Beginner Package Files/employees.txt", "a")        # a = append, ajout d<une liste au fichier
 employee_file.write("\nToby - Human Ressource")
 employee_file.close()
 print("\n")
 
-employee_file = open("employees1.txt", "w")        # w = w, cree un nouveau fichier et overwrite tout
+employee_file = open("Python Course Beginner Package Files/employees1.txt", "w")        # w = w, cree un nouveau fichier et overwrite tout
 employee_file.write("\nKelly - Customer Service")
 employee_file.close()
 print("\n")
@@ -423,7 +423,6 @@ print("\n")
 
 #----- Modules and Pip (3h 28min 15sec)  -----
 import tools_example
-print(tools_example.roll_dice(10))
 # https://docs.python.org/3/py-modindex.html    Information sur les modules de Python
 # python-docx pour aller chercher d'autres modules a installe
 # "pip" est bon pour downloader des modules avec python-docx
@@ -474,6 +473,32 @@ print("\n")
 
 
 #----- Object Functions (4h 08min 28sec)  -----
+# from Student import Student    # From the Student file import Student class
+Student1 = Student("Oscar", "Accounting", 3.1, False)
+Student2 = Student("Phyllis", "Business", 3.8, False)
+
+print(Student1.on_honor_roll())        # Function inside a class
+print(Student2.on_honor_roll())
+print("\n")
+
+
+#----- Inheritance (4h 12min 39sec)  -----
+from Chef import Chef
+from ChineseChef import ChineseChef
+myChef = Chef()
+myChef.make_chicken()
+myChef.make_salad()
+myChef.make_special_dish()
+print("\n")
+myChineseChef = ChineseChef()
+myChineseChef.make_frie_rice()
+print("\n")
+myChineseChef.make_special_dish()
+myChef.make_special_dish()
+print("\n")
+
+
+#----- Python Interpreter (4h 20min 44sec)  -----
 
 
 
